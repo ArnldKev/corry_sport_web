@@ -681,7 +681,7 @@ h1 em {
 }
 
 .product-photo:after {
-  content:'Ver detalle ↗';
+  content:'Ver detalle';
   position:absolute;
   bottom:12px;
   left:12px;
@@ -2574,4 +2574,60 @@ dialog::backdrop {background:rgba(8,8,13,.42);backdrop-filter:blur(7px);}
 @media(max-width:680px) {
   .nav-links {background:rgba(255,255,255,.98);}
   .menu-btn {background:#fff;border-color:#dedee6;}
+}
+
+/* Iconos vectoriales: trazos consistentes en Safari, iOS, Android y escritorio. */
+.ui-icon {
+  display:inline-block;
+  width:20px;
+  height:20px;
+  flex-shrink:0;
+  vertical-align:middle;
+  color:inherit;
+  pointer-events:none;
+}
+.btn>.ui-icon,.btn>span>.ui-icon {width:21px;height:21px;}
+.btn>.ui-icon {transition:transform .2s;}
+.btn:hover>.ui-icon {transform:translate(2px,-2px);}
+.text-link>.ui-icon,.text-link>span>.ui-icon {width:18px;height:18px;}
+.announcement a {display:inline-flex;align-items:center;gap:7px;}
+.announcement .ui-icon {width:13px;height:13px;}
+.order-btn>span:last-child .ui-icon {width:17px;height:17px;}
+.scroll-cue {display:inline-flex;align-items:center;justify-content:center;}
+.scroll-cue .ui-icon {width:25px;height:25px;}
+.hero-product b {display:inline-flex;vertical-align:middle;}
+.hero-product .ui-icon {width:15px;height:15px;}
+.brand-strip i {display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;}
+.brand-strip .icon-brand-divider {width:23px;height:23px;stroke-width:1.5;}
+.search-box>span {display:inline-flex;align-items:center;}
+.search-box .ui-icon {width:19px;height:19px;}
+.back-top,.footer-bottom>a {display:inline-flex;align-items:center;gap:8px;}
+.back-top .ui-icon,.footer-bottom .ui-icon {width:16px;height:16px;}
+.social-links a>span:last-child {display:inline-flex;align-items:center;}
+.social-links a>span:last-child .ui-icon {width:15px;height:15px;}
+.step b {display:inline-flex;align-items:center;}
+.step .ui-icon {width:22px;height:22px;}
+.add-btn {display:grid;place-items:center;}
+.add-btn .ui-icon {width:19px;height:19px;}
+.quantity button {display:grid;place-items:center;}
+.quantity .ui-icon {width:16px;height:16px;}
+.close-btn .ui-icon {width:21px;height:21px;}
+.product-photo:after {
+  padding-right:44px;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23202026' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 18 18 6M6 6h12v12'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;
+  background-size:18px 18px;
+  background-position:right 15px center;
+}
+@media(max-width:680px) {
+  .brand-strip .icon-brand-divider {width:18px;height:18px;}
+}
+@media(prefers-reduced-motion:reduce) {
+  .btn>.ui-icon {transition:none;}
+}
+@media(max-width:680px) {
+  .step b {display:none;}
+}
+@media(max-width:680px) {
+  .announcement>a {display:none;}
 }
