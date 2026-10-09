@@ -172,3 +172,8 @@ dialog::backdrop {background:#18263c70;backdrop-filter:blur(10px);}
 .back-top {color:#48638c;}
 @media(max-width:1000px) {.campaign-services .container>span{border-left-color:#ffffff40;}}
 @media(max-width:760px) {.menu-btn{background:#f7f9fc;border-color:#d2dce9;}.menu-btn span{background:#2c3c56;}.nav-links{background:#fffffff7;border-bottom-color:#ced8e8;}.nav-links a{color:#455b7c;}.campaign-services .container>span{border-left:0;border-top-color:#ffffff30;}}
+
+/* Vector arrows render consistently across mobile and desktop browsers. */
+.campaign-arrow {display:block;width:20px;height:20px;flex-shrink:0;}
+.campaign-secondary>span,.campaign-badge>span,.campaign-services b {display:inline-flex;align-items:center;justify-content:center;}
+@media(max-width:760px) {.campaign-arrow {width:18px;height:18px;}}
