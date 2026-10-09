@@ -1,0 +1,174 @@
+/* Variante clara de la identidad futurista CORRY SPORT. */
+:root {color-scheme:light;--orange:#df1531;--gold:#df1531;--black:#10131a;--black-2:#242835;--ink:#161923;--muted:#626a7c;--line:#d9dfe9;--surface:#fff;--surface-soft:#f4f6fa;--accent-ink:#be0d28;}
+body {background:#fff;color:#171a23;}
+::selection {background:#df1531;color:#fff;}
+.eyebrow {color:#c51730;}
+.muted {color:#71798b;}
+:focus-visible {outline-color:#cc1833;}
+.announcement {background:#f3f5f8;color:#626979;border-bottom-color:#e0e4ec;}
+.announcement>a {color:#3e4658;}
+.announcement>span {color:#d81430;}
+.header {background:#fffffff0;border-bottom-color:#dce1eb;box-shadow:0 8px 26px #17213b08;}
+.nav-links a {color:#454b5d;}
+.nav-links a:hover {color:#bd122c;}
+.nav-links a:after {background:#df1531;box-shadow:0 0 12px #df153128;}
+.order-btn {background:linear-gradient(120deg,#e71b37,#c10d28);border-color:#df2441;color:#fff;box-shadow:0 0 0 4px #df153107,0 8px 26px #df153118;}
+.order-btn:hover,.order-btn.has-items {background:linear-gradient(120deg,#eb2541,#bd102a);border-color:#d91633;box-shadow:0 0 0 4px #df15310c,0 8px 28px #df153126;}
+#cartCount {background:#fff;color:#bf102b;}
+.menu-btn {background:#f7f8fb;border-color:#d6dce7;}
+.menu-btn span {background:#1b2030;}
+
+.campaign {color:#181b24;background:#fff;border-bottom-color:#e2e5ec;}
+.campaign-stage {background:radial-gradient(ellipse at 24% 35%,#fff,transparent 68%),linear-gradient(115deg,#f6f7fa,#ecf0f5);}
+.campaign-stage::before {background-image:linear-gradient(#24314807 1px,transparent 1px),linear-gradient(90deg,#24314807 1px,transparent 1px);}
+.campaign-stage::after {background:#df1531;box-shadow:0 0 20px #df153128;}
+.brand-orbit {border-color:#db163231;}
+.brand-orbit::before {border-top-color:#d81632;border-right-color:#d8163260;}
+.brand-orbit::after {background:#d81632;box-shadow:0 0 10px #d8163233;}
+.brand-edition {color:#656d7f;}
+.campaign-kicker {color:#626b7e;}
+.campaign-kicker>span {background:#df1531;box-shadow:0 0 8px #df153133;}
+.campaign h1 {text-shadow:none;}
+.campaign h1>span {color:#df1531;text-shadow:none;}
+.campaign h1>strong {color:#11151c;}
+.campaign-ribbon {background:linear-gradient(100deg,#e41531,#c20b26);color:#fff;border-color:#dc1431;border-left-color:#af0821;box-shadow:0 7px 22px #dc143116;}
+.campaign-ribbon::after {border-top-color:#ff8397;}
+.campaign-benefits>div {border-color:#dce1eb;background:linear-gradient(135deg,#ffffffd9,#f6f8fb);box-shadow:0 4px 12px #18325803;}
+.campaign-benefits>div+div {border-left-color:#dce1eb;}
+.campaign-benefits>div::before {background:#df1531;}
+.campaign-benefits svg {color:#d91531;}
+.campaign-benefits span {color:#333b4d;}
+.campaign-motto {color:#bf102b;}
+.campaign-motto>span {color:#df1531;}
+.campaign-cta {background:linear-gradient(110deg,#e51b37,#c00c27);border-color:#d81833;box-shadow:0 8px 26px #d416311d;color:#fff;}
+.campaign-cta:hover {background:linear-gradient(110deg,#ee2c47,#c8102b);box-shadow:0 8px 30px #d416312a;}
+.campaign-cta svg {color:#fff;}
+.campaign-secondary {color:#2f374a;}
+.campaign-secondary span {color:#d71531;}
+.campaign-slash {background:#df1531;filter:drop-shadow(0 0 6px #df153155);}
+.campaign-corner {color:#818b9e;}
+.campaign-corner i {background:#df1531;}
+/* La fotografía mantiene su atmósfera roja y el distintivo se integra con el fondo claro. */
+.campaign-badge {background:#ffffffed;color:#1c2333;border-color:#ffffffc9;border-left-color:#df1531;box-shadow:0 12px 28px #0003;}
+.campaign-badge small {color:#6b7181;}
+.campaign-badge strong {color:#bc122d;}
+.campaign-badge>span {color:#cf1330;}
+.campaign-services {background:linear-gradient(110deg,#e51732,#c60b28);color:#fff;border-top-color:#fff;border-bottom-color:#d51632;}
+.campaign-services .container>span {border-left-color:#ffffff40;}
+.campaign-services svg,.campaign-services b {color:#fff;}
+
+.catalog {background:radial-gradient(ellipse at 90% 0,#e9edf670,transparent 45%),#fff;}
+.section-head>p {color:#626b7c;}
+.catalog-toolbar {border-color:#dbe1eb;background:linear-gradient(135deg,#fbfcfe,#f2f5fa);box-shadow:0 14px 40px #23365805;}
+.catalog-toolbar::before {background:#df1531;box-shadow:0 0 10px #df153121;}
+.pill {background:#fff;border-color:#d7deea;color:#566176;}
+.pill span {color:#737f96;}
+.pill.active {background:#df15310b;color:#ac1028;border-color:#df1531;box-shadow:inset 0 -2px 0 #df1531;}
+.pill.active span {color:#bb1330;}
+.pill:hover {border-color:#d9153180;color:#b50f29;}
+.search-box {background:#fff;border-color:#cfd7e5;color:#65728b;}
+.search-box:focus-within {border-color:#df1531;box-shadow:0 0 0 3px #df15310a;}
+.search-box input {color:#232b3c;}
+input::placeholder,textarea::placeholder {color:#768198;}
+.search-box kbd {color:#7d879c;border-color:#dce1eb;background:#f5f7fb;}
+.sort-label {color:#69758b;}
+.sort-label select {background:#fff;border-color:#d2dbe9;color:#333e53;}
+.results-line {color:#6b7890;}
+.results-line strong {color:#364259;}
+.product-card {background:#fff;border-color:#dbe1eb;box-shadow:0 5px 18px #24365805;}
+.product-card:hover {border-color:#e5173266;box-shadow:0 13px 32px #1c2c4b10,0 0 18px #e5173205;}
+.product-photo {background:linear-gradient(135deg,#f5f7fa,#e7ebf2);}
+.product-photo::before {background:linear-gradient(45deg,transparent 49%,#df1531 50%);}
+.product-code {color:#4a5469;background:#fffffff0;border-left-color:#df1531;box-shadow:0 2px 7px #26365306;}
+.product-info {color:#1f2635;}
+.product-meta {color:#6c7790;}
+.color-dot {background:#202633;border-color:#69758c;}
+.product-info h3 {color:#202737;}
+.product-info h3 button:hover {color:#c31430;}
+.sizes-note {color:#737e93;}
+.card-bottom {border-top-color:#e9edf4;}
+.price {color:#1d2535;}
+.price small {color:#737e93;}
+.add-btn {color:#ca1330;background:#df153105;border-color:#df153136;}
+.add-btn:hover {background:#df1531;border-color:#df1531;color:#fff;box-shadow:0 0 15px #df153119;}
+.catalog-bottom {border-color:#dce2ed;}
+.catalog-bottom p {color:#727d92;}
+.catalog-bottom .text-link {color:#be102b;}
+.empty-state {color:#263147;}
+.empty-state p {color:#6a768c;}
+
+.brand-section {background:radial-gradient(ellipse at 100% 0,#e5eaf477,transparent 60%),#f3f5f9;color:#232b3d;border-top-color:#dce2ee;border-bottom-color:#dce2ee;}
+.brand-photo {border-color:#c8d0df;box-shadow:0 20px 50px #1f304b12;}
+.brand-photo>span {color:#fff;}
+.brand-photo em {color:#ff4963;}
+.photo-label {color:#e1e5f0;}
+.brand-story .eyebrow {color:#c11731;}
+.brand-story h2 {color:#202635;}
+.brand-story .muted {color:#7a8498;}
+.brand-story>p:not(.eyebrow),.benefit p {color:#68758c;}
+.benefit {border-top-color:#d5ddea;}
+.benefit>span {color:#c51631;border-color:#df153130;background:#df153107;}
+.benefit h3 {color:#29354a;}
+.steps {background:#fff;}
+.step {border-color:#d7deeb;background:linear-gradient(150deg,#fff,#f3f6fb);box-shadow:0 7px 22px #26365305;}
+.step::after {background:#df1531;}
+.step>span {color:#d51532;}
+.step b {color:#8a97ae;}
+.step h3 {color:#273249;}
+.step p {color:#65758f;}
+.contact-section {background:radial-gradient(ellipse at 5% 70%,#df153106,transparent 60%),#f4f6fa;border-top-color:#dce3ee;}
+.contact-copy h2 {color:#1c2332;}
+.contact-copy h2 em {color:#dc1734;}
+.contact-copy>p:not(.eyebrow) {color:#63728a;}
+.contact-copy .text-link {color:#b70f2a;}
+.contact-orbit {border-color:#df15310b;box-shadow:0 0 0 38px #df153103,0 0 0 39px #df153107;}
+.contact-form {background:linear-gradient(140deg,#fff,#f8faff);border-color:#cfd9e9;box-shadow:0 20px 50px #1c315010;}
+.contact-form::before {background:#df1531;box-shadow:0 0 15px #df153122;}
+.contact-form h3 {color:#263247;}
+.contact-form label {color:#5e708c;}
+.contact-form input,.contact-form textarea {color:#25344c;background:#fff;border-color:#ccd7e8;}
+.contact-form input:focus,.contact-form textarea:focus {border-color:#df1531;outline-color:#df15310c;}
+.contact-form>p {color:#7283a0;}
+
+.primary,.dark {color:#fff;background:linear-gradient(110deg,#e51b37,#c00c27);border-color:#d91c38;box-shadow:0 7px 22px #df153118;}
+.primary:hover,.dark:hover {color:#fff;background:linear-gradient(110deg,#ed2a45,#c6112c);box-shadow:0 8px 26px #df153124;}
+.text-link {color:#425571;}
+.product-dialog,.cart-dialog {background:#fff;color:#29364d;border-color:#cad5e8;box-shadow:0 25px 100px #18294240;}
+dialog::backdrop {background:#18263c70;backdrop-filter:blur(10px);}
+.close-btn {background:#f3f6fb;color:#566a8a;border-color:#cfdaeb;}
+.close-btn:hover {color:#fff;background:#df1531;border-color:#df1531;}
+.detail-photo {background:linear-gradient(135deg,#f4f6fa,#e4eaf3);border-color:#dbe2ed;}
+.detail-info,.detail-info h2 {color:#26354d;}
+.detail-info .price {color:#c0102c;}
+.detail-info>p,.detail-note {color:#667a9b;}
+.size-fieldset legend {color:#3f5372;}
+.size-option span {background:#fff;border-color:#c4d2e7;color:#536e95;}
+.size-option input:checked+span {background:#df15310a;color:#bd102a;border-color:#df1531;box-shadow:0 0 0 2px #df15310b;}
+.size-option input:focus-visible+span {outline-color:#c61632;}
+.clear-size,.clear-btn,.remove-btn {color:#b8102c;}
+.detail-feedback {color:#b5102a;}
+.detail-feedback [data-view-order] {background:#fff2f5;color:#b6102b;border-color:#df153135;}
+#detailForm button[type=submit].is-added {background:linear-gradient(110deg,#d51b38,#b6102c);box-shadow:0 0 0 3px #df153110;}
+.cart-header {background:#f3f6fb;border-color:#d0dbea;}
+.cart-item {border-color:#dae2ee;}
+.cart-item>img {background:#e9edf5;}
+.cart-item h3 {color:#2b3b54;}
+.cart-item p {color:#6d82a1;}
+.cart-controls select {background:#fff;color:#4a6388;border-color:#c5d4e9;}
+.quantity {border-color:#c5d4e9;color:#405b83;}
+.quantity button {background:#f1f5fb;color:#b91531;}
+.cart-summary {background:#f4f7fc;border-color:#cbd9ed;}
+.cart-summary>div strong {color:#be122e;}
+.cart-summary p,.cart-empty {color:#697f9f;}
+.toast {background:#fff;color:#3d557a;border-color:#df153133;box-shadow:0 10px 30px #273c5a18;}
+.footer {background:#edf1f7;border-top-color:#d9e1ee;color:#3c5377;}
+.footer-top p {color:#6b7e9d;}
+.footer-bottom {color:#637b9f;border-color:#cad7e9;}
+.creator-credit strong {color:#c31631;}
+.social-links a,.back-top {background:#f9fbff;border-color:#c8d6ea;color:#516c95;}
+.social-links a[aria-disabled=true] {color:#6b80a2;}
+.social-links a[href]:hover {background:#df153108;border-color:#df153150;}
+.social-links a>span:last-child {color:#bd1732;}
+.back-top {color:#48638c;}
+@media(max-width:1000px) {.campaign-services .container>span{border-left-color:#ffffff40;}}
+@media(max-width:760px) {.menu-btn{background:#f7f9fc;border-color:#d2dce9;}.menu-btn span{background:#2c3c56;}.nav-links{background:#fffffff7;border-bottom-color:#ced8e8;}.nav-links a{color:#455b7c;}.campaign-services .container>span{border-left:0;border-top-color:#ffffff30;}}
