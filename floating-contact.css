@@ -1,0 +1,40 @@
+/* Always available in the bottom-right corner, above page content. */
+.whatsapp-float {
+  position:fixed;
+  right:24px;
+  bottom:calc(24px + env(safe-area-inset-bottom,0px));
+  z-index:2147483000;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:0;
+  width:58px;
+  height:58px;
+  min-height:58px;
+  padding:0;
+  border:1px solid #a4f8cc;
+  border-radius:50%;
+  background:linear-gradient(135deg,#0b9956,#047347);
+  color:#fff;
+  box-shadow:0 0 0 3px #ffffffbd,0 8px 30px #07573730;
+  font-size:13px;
+  font-weight:700;
+  letter-spacing:.3px;
+  text-decoration:none;
+  transition:transform .2s,box-shadow .2s;
+}
+.whatsapp-brand-icon {display:block;flex-shrink:0;fill:currentColor;stroke:none;}
+.whatsapp-float-icon {width:30px;height:30px;}
+.campaign-services .whatsapp-brand-icon {width:24px;height:24px;}
+.whatsapp-float:hover {color:#fff;transform:translateY(-3px);box-shadow:0 0 0 3px #ffffffbd,0 12px 32px #07573745;}
+.whatsapp-float:focus-visible {outline:3px solid #182c49;outline-offset:5px;}
+body:has(dialog[open]) .whatsapp-float {visibility:hidden;pointer-events:none;}
+.detail-info>p.sale-unit-note {padding:10px 12px;background:#f3f6fb;border-left:2px solid #cf1734;margin-bottom:15px;font-size:11px;color:#526b89;}
+@media(max-width:760px) {
+  .whatsapp-float {right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));width:54px;height:54px;min-height:54px;padding:0;}
+  .whatsapp-float-icon {width:28px;height:28px;}
+  .toast {bottom:calc(88px + env(safe-area-inset-bottom,0px));}
+  .footer {padding-bottom:90px;}
+}
+@media(prefers-reduced-motion:reduce) {.whatsapp-float {transition:none;}}
+@media print {.whatsapp-float {display:none;}}

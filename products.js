@@ -1,12 +1,15 @@
-// Modelos identificados por fotografía. Precios previos conservados; nuevos precios por confirmar.
+// Catálogo de productos; precios en soles peruanos.
 window.CORRY_PRODUCTS = [
   {
     "id": "CS-32",
     "category": "Rodillera",
     "name": "Rodillera de compresión 523",
-    "price": null,
+    "price": 59.99,
     "sizes": [
-      "Por confirmar"
+      "S",
+      "M",
+      "L",
+      "XL"
     ],
     "color": "Negro / dorado",
     "image": "assets/nuevos/rodillera-523.webp",
@@ -15,15 +18,19 @@ window.CORRY_PRODUCTS = [
     "modelCode": "523",
     "description": "Manga de rodilla de tejido elástico con diseño negro y dorado.",
     "featured": true,
-    "isNew": true
+    "isNew": true,
+    "saleUnit": "par"
   },
   {
     "id": "CS-33",
     "category": "Rodillera",
     "name": "Rodillera de compresión 532",
-    "price": null,
+    "price": 49.99,
     "sizes": [
-      "Por confirmar"
+      "S",
+      "M",
+      "L",
+      "XL"
     ],
     "color": "Negro / gris",
     "image": "assets/nuevos/rodillera-532.webp",
@@ -32,15 +39,19 @@ window.CORRY_PRODUCTS = [
     "modelCode": "532",
     "description": "Manga de rodilla con tejido elástico y zonas de ajuste diferenciadas.",
     "featured": true,
-    "isNew": true
+    "isNew": true,
+    "saleUnit": "par"
   },
   {
     "id": "CS-34",
     "category": "Rodillera",
     "name": "Rodillera con aro de gel 531",
-    "price": null,
+    "price": 69.99,
     "sizes": [
-      "Por confirmar"
+      "S",
+      "M",
+      "L",
+      "XL"
     ],
     "color": "Negro / dorado",
     "image": "assets/nuevos/rodillera-531.webp",
@@ -49,15 +60,19 @@ window.CORRY_PRODUCTS = [
     "modelCode": "531",
     "description": "Tejido elástico, abertura frontal y aro de gel alrededor de la rodilla.",
     "featured": true,
-    "isNew": true
+    "isNew": true,
+    "saleUnit": "unidad"
   },
   {
     "id": "CS-35",
     "category": "Rodillera",
     "name": "Rodillera ajustable con gel 188",
-    "price": null,
+    "price": 65.0,
     "sizes": [
-      "Por confirmar"
+      "S",
+      "M",
+      "L",
+      "XL"
     ],
     "color": "Negro",
     "image": "assets/nuevos/rodillera-188.webp",
@@ -66,15 +81,19 @@ window.CORRY_PRODUCTS = [
     "modelCode": "188",
     "description": "Diseño con abertura frontal, tiras de ajuste y aro de gel.",
     "featured": true,
-    "isNew": true
+    "isNew": true,
+    "saleUnit": "unidad"
   },
   {
     "id": "CS-36",
     "category": "Rodillera",
     "name": "Rodillera con varillas y gel 519",
-    "price": null,
+    "price": 65.0,
     "sizes": [
-      "Por confirmar"
+      "S",
+      "M",
+      "L",
+      "XL"
     ],
     "color": "Negro / dorado",
     "image": "assets/nuevos/rodillera-519.webp",
@@ -83,15 +102,19 @@ window.CORRY_PRODUCTS = [
     "modelCode": "519",
     "description": "Manga larga de rodilla con varillas laterales y aro de gel.",
     "featured": true,
-    "isNew": true
+    "isNew": true,
+    "saleUnit": "unidad"
   },
   {
     "id": "CS-37",
     "category": "Rodillera",
     "name": "Rodillera de ajuste envolvente",
-    "price": null,
+    "price": 59.0,
     "sizes": [
-      "Por confirmar"
+      "S",
+      "M",
+      "L",
+      "XL"
     ],
     "color": "Negro",
     "image": "assets/nuevos/rodillera-ajuste.webp",
@@ -100,15 +123,19 @@ window.CORRY_PRODUCTS = [
     "modelCode": "",
     "description": "Diseño envolvente con abertura frontal y dos bandas de ajuste.",
     "featured": true,
-    "isNew": true
+    "isNew": true,
+    "saleUnit": "unidad"
   },
   {
     "id": "CS-38",
     "category": "Rodillera",
     "name": "Rodillera con inserto interior",
-    "price": null,
+    "price": 59.99,
     "sizes": [
-      "Por confirmar"
+      "S",
+      "M",
+      "L",
+      "XL"
     ],
     "color": "Negro / gris",
     "image": "assets/nuevos/rodillera-inserto.webp",
@@ -117,15 +144,19 @@ window.CORRY_PRODUCTS = [
     "modelCode": "",
     "description": "Diseño elástico con panel interior y tejido de ajuste.",
     "featured": true,
-    "isNew": true
+    "isNew": true,
+    "saleUnit": "par"
   },
   {
     "id": "CS-39",
     "category": "Rodillera",
     "name": "Rodillera con férula BRA-514",
-    "price": null,
+    "price": 75.0,
     "sizes": [
-      "Por confirmar"
+      "S",
+      "M",
+      "L",
+      "XL"
     ],
     "color": "Negro",
     "image": "assets/nuevos/rodillera-ferula-514.webp",
@@ -134,15 +165,19 @@ window.CORRY_PRODUCTS = [
     "modelCode": "BRA-514",
     "description": "Rodillera con abertura frontal y estructura lateral de soporte.",
     "featured": true,
-    "isNew": true
+    "isNew": true,
+    "saleUnit": "unidad"
   },
   {
     "id": "CS-40",
     "category": "Rodillera",
     "name": "Banda de soporte rotuliano BRA-149",
-    "price": null,
+    "price": 39.0,
     "sizes": [
-      "Por confirmar"
+      "S",
+      "M",
+      "L",
+      "XL"
     ],
     "color": "Negro",
     "image": "assets/nuevos/banda-rotuliana-149.webp",
@@ -151,13 +186,14 @@ window.CORRY_PRODUCTS = [
     "modelCode": "BRA-149",
     "description": "Banda corta que se coloca debajo de la rodilla.",
     "featured": true,
-    "isNew": true
+    "isNew": true,
+    "saleUnit": "unidad"
   },
   {
     "id": "CS-01",
     "category": "Rodillera",
     "name": "Rodillera sin abertura",
-    "price": 32,
+    "price": 46.0,
     "sizes": [
       "S",
       "M",
@@ -170,7 +206,8 @@ window.CORRY_PRODUCTS = [
     "height": 749,
     "sourceSlide": 2,
     "featured": true,
-    "modelCode": "BRA-104"
+    "modelCode": "BRA-104",
+    "saleUnit": "unidad"
   },
   {
     "id": "CS-02",
@@ -195,7 +232,7 @@ window.CORRY_PRODUCTS = [
     "id": "CS-03",
     "category": "Rodillera",
     "name": "Rodillera deportiva con varillas y gel",
-    "price": 54,
+    "price": 55.0,
     "sizes": [
       "S",
       "M",
@@ -208,13 +245,14 @@ window.CORRY_PRODUCTS = [
     "height": 1600,
     "sourceSlide": 2,
     "featured": true,
-    "modelCode": "BRA-117"
+    "modelCode": "BRA-117",
+    "saleUnit": "unidad"
   },
   {
     "id": "CS-04",
     "category": "Rodillera",
     "name": "Rodillera articulada con bisagra",
-    "price": 70,
+    "price": 75.0,
     "sizes": [
       "S",
       "M",
@@ -228,7 +266,8 @@ window.CORRY_PRODUCTS = [
     "sourceSlide": 3,
     "featured": true,
     "modelCode": "BRA-103",
-    "video": "assets/nuevos/rodillera-103-demostracion.mp4"
+    "video": "assets/nuevos/rodillera-103-demostracion.mp4",
+    "saleUnit": "unidad"
   },
   {
     "id": "CS-05",
@@ -253,7 +292,7 @@ window.CORRY_PRODUCTS = [
     "id": "CS-08",
     "category": "Rodillera",
     "name": "Manga de compresión rodilla y pantorrilla",
-    "price": 39,
+    "price": 50.0,
     "sizes": [
       "S",
       "M",
@@ -266,15 +305,19 @@ window.CORRY_PRODUCTS = [
     "height": 1600,
     "sourceSlide": 4,
     "featured": true,
-    "modelCode": "BRA-512"
+    "modelCode": "BRA-512",
+    "saleUnit": "unidad"
   },
   {
     "id": "CS-41",
     "category": "Muslera",
     "name": "Muslera elástica Branson",
-    "price": null,
+    "price": 59.99,
     "sizes": [
-      "Por confirmar"
+      "S",
+      "M",
+      "L",
+      "XL"
     ],
     "color": "Negro / gris",
     "image": "assets/nuevos/muslera-elastica.webp",
@@ -283,7 +326,8 @@ window.CORRY_PRODUCTS = [
     "modelCode": "",
     "description": "Manga elástica para el muslo con diseño anatómico.",
     "featured": true,
-    "isNew": true
+    "isNew": true,
+    "saleUnit": "par"
   },
   {
     "id": "CS-13",
@@ -327,9 +371,12 @@ window.CORRY_PRODUCTS = [
     "id": "CS-42",
     "category": "Hombro",
     "name": "Soporte de hombro BRA-134",
-    "price": null,
+    "price": 59.99,
     "sizes": [
-      "Por confirmar"
+      "S",
+      "M",
+      "L",
+      "XL"
     ],
     "color": "Negro",
     "image": "assets/nuevos/hombro-134.webp",
@@ -338,7 +385,8 @@ window.CORRY_PRODUCTS = [
     "modelCode": "BRA-134",
     "description": "Soporte de hombro con manga y banda de ajuste alrededor del torso.",
     "featured": true,
-    "isNew": true
+    "isNew": true,
+    "saleUnit": "unidad"
   },
   {
     "id": "CS-16",
@@ -363,9 +411,12 @@ window.CORRY_PRODUCTS = [
     "id": "CS-43",
     "category": "Tobillera",
     "name": "Tobillera ajustable BRA-113",
-    "price": null,
+    "price": 55.0,
     "sizes": [
-      "Por confirmar"
+      "S",
+      "M",
+      "L",
+      "XL"
     ],
     "color": "Negro",
     "image": "assets/nuevos/tobillera-113.webp",
@@ -374,15 +425,19 @@ window.CORRY_PRODUCTS = [
     "modelCode": "BRA-113",
     "description": "Soporte de tobillo con bandas envolventes de ajuste.",
     "featured": true,
-    "isNew": true
+    "isNew": true,
+    "saleUnit": "unidad"
   },
   {
     "id": "CS-44",
     "category": "Tobillera",
     "name": "Tobillera con bandas cruzadas 675",
-    "price": null,
+    "price": 39,
     "sizes": [
-      "Por confirmar"
+      "S",
+      "M",
+      "L",
+      "XL"
     ],
     "color": "Negro / gris",
     "image": "assets/nuevos/tobillera-675.webp",
@@ -391,15 +446,19 @@ window.CORRY_PRODUCTS = [
     "modelCode": "675",
     "description": "Tejido elástico con bandas que cruzan sobre el tobillo.",
     "featured": true,
-    "isNew": true
+    "isNew": true,
+    "saleUnit": "unidad"
   },
   {
     "id": "CS-45",
     "category": "Tobillera",
     "name": "Tobillera con gel 533",
-    "price": null,
+    "price": 55.0,
     "sizes": [
-      "Por confirmar"
+      "S",
+      "M",
+      "L",
+      "XL"
     ],
     "color": "Gris / azul",
     "image": "assets/nuevos/tobillera-533.webp",
@@ -408,15 +467,19 @@ window.CORRY_PRODUCTS = [
     "modelCode": "533",
     "description": "Manga de tobillo con zonas de tejido y almohadilla de gel.",
     "featured": true,
-    "isNew": true
+    "isNew": true,
+    "saleUnit": "unidad"
   },
   {
     "id": "CS-46",
     "category": "Tobillera",
     "name": "Tobillera elástica 530",
-    "price": null,
+    "price": 46,
     "sizes": [
-      "Por confirmar"
+      "S",
+      "M",
+      "L",
+      "XL"
     ],
     "color": "Negro / dorado",
     "image": "assets/nuevos/tobillera-530.webp",
@@ -425,15 +488,19 @@ window.CORRY_PRODUCTS = [
     "modelCode": "530",
     "description": "Manga de tobillo de tejido elástico con talón abierto.",
     "featured": true,
-    "isNew": true
+    "isNew": true,
+    "saleUnit": "unidad"
   },
   {
     "id": "CS-47",
     "category": "Tobillera",
     "name": "Tobillera elástica 764",
-    "price": null,
+    "price": 49.99,
     "sizes": [
-      "Por confirmar"
+      "S",
+      "M",
+      "L",
+      "XL"
     ],
     "color": "Negro",
     "image": "assets/nuevos/tobillera-764.webp",
@@ -442,7 +509,8 @@ window.CORRY_PRODUCTS = [
     "modelCode": "764",
     "description": "Diseño elástico de tobillo con abertura en el talón.",
     "featured": true,
-    "isNew": true
+    "isNew": true,
+    "saleUnit": "par"
   },
   {
     "id": "CS-10",
@@ -467,7 +535,7 @@ window.CORRY_PRODUCTS = [
     "id": "CS-21",
     "category": "Codera",
     "name": "Codera corta",
-    "price": 25,
+    "price": 19.9,
     "sizes": [
       "S",
       "M",
@@ -480,15 +548,19 @@ window.CORRY_PRODUCTS = [
     "height": 1067,
     "sourceSlide": 8,
     "featured": true,
-    "modelCode": "BRA-132"
+    "modelCode": "BRA-132",
+    "saleUnit": "unidad"
   },
   {
     "id": "CS-48",
     "category": "Muñeca",
     "name": "Mitones de soporte BRA-128",
-    "price": null,
+    "price": 59.99,
     "sizes": [
-      "Por confirmar"
+      "S",
+      "M",
+      "L",
+      "XL"
     ],
     "color": "Negro",
     "image": "assets/nuevos/mitones-128.webp",
@@ -497,15 +569,19 @@ window.CORRY_PRODUCTS = [
     "modelCode": "BRA-128",
     "description": "Soporte corto de mano y muñeca con dedos libres y ajuste envolvente.",
     "featured": true,
-    "isNew": true
+    "isNew": true,
+    "saleUnit": "unidad"
   },
   {
     "id": "CS-49",
     "category": "Muñeca",
     "name": "Muñequera con gel 771",
-    "price": null,
+    "price": 36.0,
     "sizes": [
-      "Por confirmar"
+      "S",
+      "M",
+      "L",
+      "XL"
     ],
     "color": "Negro / gris",
     "image": "assets/nuevos/munequera-771.webp",
@@ -514,15 +590,19 @@ window.CORRY_PRODUCTS = [
     "modelCode": "771",
     "description": "Soporte de mano y muñeca con almohadillas de gel.",
     "featured": true,
-    "isNew": true
+    "isNew": true,
+    "saleUnit": "unidad"
   },
   {
     "id": "CS-50",
     "category": "Pantaloneta",
     "name": "Pantaloneta licra",
-    "price": null,
+    "price": 69.99,
     "sizes": [
-      "Por confirmar"
+      "S",
+      "M",
+      "L",
+      "XL"
     ],
     "color": "Negro",
     "image": "assets/nuevos/pantaloneta-licra.webp",
@@ -593,15 +673,19 @@ window.CORRY_PRODUCTS = [
           433
         ]
       }
-    ]
+    ],
+    "saleUnit": "unidad"
   },
   {
     "id": "CS-51",
     "category": "Polo",
     "name": "Polo licra de manga larga",
-    "price": null,
+    "price": 69.99,
     "sizes": [
-      "Por confirmar"
+      "S",
+      "M",
+      "L",
+      "XL"
     ],
     "color": "Negro",
     "image": "assets/nuevos/polo-licra.webp",
@@ -672,13 +756,14 @@ window.CORRY_PRODUCTS = [
           493
         ]
       }
-    ]
+    ],
+    "saleUnit": "unidad"
   },
   {
     "id": "CS-52",
     "category": "Cinta",
     "name": "Cinta kinesiológica Miracle Tape",
-    "price": null,
+    "price": 36,
     "sizes": [
       "5 cm × 5 m"
     ],
@@ -799,7 +884,8 @@ window.CORRY_PRODUCTS = [
           257
         ]
       }
-    ]
+    ],
+    "saleUnit": "rollo"
   },
   {
     "id": "CS-06",

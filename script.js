@@ -1,8 +1,8 @@
 /* Static storefront. Product source and image mapping live in products.js.
-   The WhatsApp number is retained from the original website. */
+   Prices, sizes and contact information are supplied by the store owner. */
 (() => {
   'use strict';
-  const WHATSAPP_NUMBER = '51930335733';
+  const WHATSAPP_NUMBER = '51916852942';
   // Perfiles oficiales de CORRY SPORT proporcionados por el propietario.
   const SOCIAL_LINKS = {
     instagram: 'https://instagram.com/corry_sport/',
@@ -20,6 +20,7 @@
   const initialLimit = Math.max(12, products.filter(p => p.featured).length);
   const hasPrice = p => Number.isFinite(p.price);
   const priceText = p => hasPrice(p) ? money(p.price) : 'Consultar precio';
+  const unitLabel = p => p.saleUnit || 'unidad';
   const variants = p => p.gallery || [{image:p.image,width:p.width,height:p.height,color:p.color}];
   const colorHex = color => ({Negro:'#202632',Blanco:'#fff',Rojo:'#df1531',Azul:'#1569df','Azul marino':'#172747',Gris:'#8490a3'}[color.split(' / ')[0]] || '#202632');
   const rowKey = (row,size=row.size) => encodeURIComponent(`${row.id}|${size}|${row.color}`);
@@ -97,7 +98,7 @@
       const result = [];
       saved.slice(0,124).forEach(item => {
         const product = item && byId.get(item.id);
-        if (!product || !product.sizes.includes(item.size) || !Number.isInteger(item.quantity) || item.quantity < 1) return;
+        if (!product || (!product.sizes.includes(item.size) && item.size !== 'Por confirmar') || !Number.isInteger(item.quantity) || item.quantity < 1) return;
         const color = variants(product).some(v => v.color === item.color) ? item.color : product.color;
         const existing = result.find(row => row.id === item.id && row.size === item.size && row.color === color);
         if (existing) existing.quantity = Math.min(99, existing.quantity + item.quantity);
@@ -156,7 +157,7 @@
     $('#productGrid').innerHTML = visible.map(p => `
       <article class="product-card reveal${p.isNew ? ' new-product' : ''}" data-id="${p.id}">
         <button class="product-photo" data-product="${p.id}" aria-label="Ver detalles de ${escapeHtml(p.name)}"><span class="product-code">${p.modelCode || p.id}</span>${p.isNew ? '<span class="new-label">NUEVO</span>' : ''}<span class="card-media">${mediaMarkup(p)}</span></button>
-        <div class="product-info"><div class="product-meta"><span>${p.category}</span><span><i class="color-dot" style="background:${colorHex(p.color)}" aria-hidden="true"></i>${p.gallery ? '5 colores' : p.color}</span></div><h3><button data-product="${p.id}">${p.name}</button></h3><p class="sizes-note">${sizeNote(p)}</p><div class="card-bottom"><span class="price${hasPrice(p) ? '' : ' price-pending'}">${priceText(p)}${hasPrice(p) ? ' <small>/ un.</small>' : ''}</span><button class="add-btn" data-product="${p.id}" aria-label="Ver opciones de ${escapeHtml(p.name)}">${icon('plus')}</button></div><button class="details-link" data-product="${p.id}">Ver detalles ${icon('arrow')}</button></div>
+        <div class="product-info"><div class="product-meta"><span>${p.category}</span><span><i class="color-dot" style="background:${colorHex(p.color)}" aria-hidden="true"></i>${p.gallery ? '5 colores' : p.color}</span></div><h3><button data-product="${p.id}">${p.name}</button></h3><p class="sizes-note">${sizeNote(p)}</p><div class="card-bottom"><span class="price${hasPrice(p) ? '' : ' price-pending'}">${priceText(p)}${hasPrice(p) ? ` <small>/ ${unitLabel(p)}</small>` : ''}</span><button class="add-btn" data-product="${p.id}" aria-label="Ver opciones de ${escapeHtml(p.name)}">${icon('plus')}</button></div><button class="details-link" data-product="${p.id}">Ver detalles ${icon('arrow')}</button></div>
       </article>`).join('');
     $('#resultCount').innerHTML = `<strong>${filtered.length} ${filtered.length === 1 ? 'producto' : 'productos'}</strong> ${filtered.length > visible.length ? `· Mostrando ${visible.length}` : '· ' + state.category}`;
     $('#emptyState').hidden = filtered.length !== 0;
@@ -213,7 +214,7 @@
     activeGallery = {id,index:0}; activeApplication = 0;
     const fixedSize = p.sizes.length === 1;
     const sizeFields = fixedSize ? `<div class="pending-spec"><span>${p.category === 'Cinta' ? 'MEDIDA DEL ROLLO' : 'TALLA'}</span><strong>${p.sizes[0]}</strong><input type="hidden" name="size" value="${escapeHtml(p.sizes[0])}"></div>` : `<fieldset class="size-fieldset"><legend>Selecciona tu talla</legend><div class="size-options">${p.sizes.map(size=>`<label class="size-option"><input type="radio" name="size" value="${size}" required><span>${size}</span></label>`).join('')}</div><button class="clear-size" type="button" data-clear-size>Quitar selección</button></fieldset>`;
-    $('#productDetail').innerHTML = `<div class="detail-grid">${galleryMarkup(p)}<form class="detail-info" id="detailForm" data-id="${id}" data-selected-size="" data-selected-color="${escapeHtml(p.color)}"><p class="eyebrow">${p.category.toUpperCase()} / ${p.modelCode || id}</p>${p.isNew ? '<span class="detail-new">NUEVO EN CORRY SPORT</span>' : ''}<h2 id="detailTitle">${p.name}</h2>${p.description ? `<p class="product-description">${p.description}</p>` : ''}<span class="price${hasPrice(p) ? '' : ' price-pending'}">${priceText(p)}${hasPrice(p) ? ' <small>/ unidad</small>' : ''}</span><p class="selected-color"><i class="color-dot" id="detailColorDot" style="background:${colorHex(p.color)}" aria-hidden="true"></i> Color: <strong id="detailColor">${p.color}</strong></p>${sizeFields}<button class="btn primary" type="submit">Agregar a mi pedido <span aria-hidden="true">${icon('plus')}</span></button><div class="detail-feedback" role="status" aria-live="polite"><p id="detailFeedback"></p><button class="text-link" type="button" data-view-order hidden>Ver mi pedido ${icon('arrow')}</button></div><p class="detail-note">${hasPrice(p) ? 'Consulta talla, disponibilidad y entrega por WhatsApp.' : 'Agrega el producto a tu pedido y consulta precio, talla y disponibilidad por WhatsApp.'}</p></form></div>${applicationMarkup(p)}`;
+    $('#productDetail').innerHTML = `<div class="detail-grid">${galleryMarkup(p)}<form class="detail-info" id="detailForm" data-id="${id}" data-selected-size="" data-selected-color="${escapeHtml(p.color)}"><p class="eyebrow">${p.category.toUpperCase()} / ${p.modelCode || id}</p>${p.isNew ? '<span class="detail-new">NUEVO EN CORRY SPORT</span>' : ''}<h2 id="detailTitle">${p.name}</h2>${p.description ? `<p class="product-description">${p.description}</p>` : ''}<span class="price${hasPrice(p) ? '' : ' price-pending'}">${priceText(p)}${hasPrice(p) ? ` <small>/ ${unitLabel(p)}</small>` : ''}</span>${p.saleUnit === 'par' ? '<p class="sale-unit-note">Cada cantidad del pedido corresponde a un par.</p>' : ''}<p class="selected-color"><i class="color-dot" id="detailColorDot" style="background:${colorHex(p.color)}" aria-hidden="true"></i> Color: <strong id="detailColor">${p.color}</strong></p>${sizeFields}<button class="btn primary" type="submit">Agregar a mi pedido <span aria-hidden="true">${icon('plus')}</span></button><div class="detail-feedback" role="status" aria-live="polite"><p id="detailFeedback"></p><button class="text-link" type="button" data-view-order hidden>Ver mi pedido ${icon('arrow')}</button></div><p class="detail-note">${hasPrice(p) ? 'Consulta talla, disponibilidad y entrega por WhatsApp.' : 'Agrega el producto a tu pedido y consulta precio, talla y disponibilidad por WhatsApp.'}</p></form></div>${applicationMarkup(p)}`;
     $('#productDialog').showModal();
     $('#productDialog').scrollTop = 0;
   }
@@ -234,11 +235,11 @@
     const previousScroll = $('#cartItems').scrollTop;
     const quantity = state.cart.reduce((sum,row) => sum+row.quantity,0);
     $('#cartCount').textContent = quantity;
-    $('#viewCartBtn').setAttribute('aria-label',`Mi pedido: ${quantity} ${quantity === 1 ? 'unidad' : 'unidades'}`);
+    $('#viewCartBtn').setAttribute('aria-label',`Mi pedido: ${quantity} ${quantity === 1 ? 'artículo' : 'artículos'}`);
     $('#viewCartBtn').classList.toggle('has-items',quantity > 0);
     $('#cartItems').innerHTML = state.cart.length ? state.cart.map((row,index) => {
       const p = byId.get(row.id);
-      return `<article class="cart-item" data-cart-key="${rowKey(row)}"><span class="cart-media">${mediaMarkup(p,variants(p).find(v=>v.color===row.color) || variants(p)[0])}</span><div><h3>${p.name}</h3><p>${row.id} · ${row.color} · ${priceText(p)}${hasPrice(p) ? ' / un.' : ''}</p><div class="cart-controls"><select data-cart-size="${index}" aria-label="Talla de ${escapeHtml(p.name)}">${p.sizes.map(size => `<option ${size === row.size ? 'selected' : ''}>${size}</option>`).join('')}</select><div class="quantity"><button data-quantity="${index}" data-delta="-1" aria-label="Reducir cantidad de ${escapeHtml(p.name)}" ${row.quantity <= 1 ? 'disabled' : ''}><svg class="ui-icon icon-minus" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/></svg></button><span>${row.quantity}</span><button data-quantity="${index}" data-delta="1" aria-label="Aumentar cantidad de ${escapeHtml(p.name)}" ${row.quantity >= 99 ? 'disabled' : ''}><svg class="ui-icon icon-plus" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"/></svg></button></div><button class="remove-btn" data-remove="${index}" aria-label="Quitar ${escapeHtml(p.name)}, talla ${row.size}">Quitar</button></div></div></article>`;
+      return `<article class="cart-item" data-cart-key="${rowKey(row)}"><span class="cart-media">${mediaMarkup(p,variants(p).find(v=>v.color===row.color) || variants(p)[0])}</span><div><h3>${p.name}</h3><p>${row.id} · ${row.color} · ${priceText(p)}${hasPrice(p) ? ' / '+unitLabel(p) : ''}</p><div class="cart-controls"><select data-cart-size="${index}" aria-label="Talla de ${escapeHtml(p.name)}">${!p.sizes.includes(row.size) ? `<option selected value="Por confirmar">Elige talla</option>` : ''}${p.sizes.map(size => `<option ${size === row.size ? 'selected' : ''}>${size}</option>`).join('')}</select><div class="quantity"><button data-quantity="${index}" data-delta="-1" aria-label="Reducir cantidad de ${escapeHtml(p.name)}" ${row.quantity <= 1 ? 'disabled' : ''}><svg class="ui-icon icon-minus" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/></svg></button><span>${row.quantity}</span><button data-quantity="${index}" data-delta="1" aria-label="Aumentar cantidad de ${escapeHtml(p.name)}" ${row.quantity >= 99 ? 'disabled' : ''}><svg class="ui-icon icon-plus" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"/></svg></button></div><button class="remove-btn" data-remove="${index}" aria-label="Quitar ${escapeHtml(p.name)}, talla ${row.size}">Quitar</button></div></div></article>`;
     }).join('') : '<div class="cart-empty"><p>Tu próximo movimiento empieza con una elección.</p><p>Agrega productos del catálogo para preparar tu pedido.</p><button class="text-link" data-close-dialog>Seguir explorando <svg class="ui-icon icon-arrow-right" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16M14 6l6 6-6 6"/></svg></button></div>';
     $('#cartTotal').textContent = totalText();
     $('#checkoutBtn').disabled = !state.cart.length;
@@ -259,7 +260,7 @@
     if (!state.cart.length) return;
     const lines = state.cart.map(row => {
       const p = byId.get(row.id);
-      return `${row.quantity} × ${p.name} (${p.modelCode || row.id})\n${p.category==='Cinta' ? 'Medida' : 'Talla'}: ${row.size} · Color: ${row.color}\n${hasPrice(p) ? `Precio: ${money(p.price)} / unidad` : 'Precio por confirmar'}`;
+      return `${row.quantity} × ${p.name} (${p.modelCode || row.id})\n${p.category==='Cinta' ? 'Medida' : 'Talla'}: ${row.size} · Color: ${row.color}\n${hasPrice(p) ? `Precio: ${money(p.price)} / ${unitLabel(p)}` : 'Precio por confirmar'}`;
     });
     openWhatsApp(`Hola CORRY SPORT, quisiera consultar este pedido:\n\n${lines.join('\n\n')}\n\nTotal a pagar: ${totalText()}\n¿Me confirman precio actual, tallas, disponibilidad y forma de entrega?`);
   }

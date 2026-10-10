@@ -14,11 +14,11 @@ Las fotos originales se extrajeron según su posición en cada diapositiva y se 
 Los precios se indican como referenciales; no se afirma disponibilidad en tiempo real.
 
 PEDIDOS Y CONTACTO
-Se conserva el número de la web original: +51 930 335 733.
+Número de WhatsApp actualizado por el propietario: +51 916 852 942.
 Para cambiarlo, actualiza WHATSAPP_NUMBER en script.js y los enlaces/número de index.html.
 El usuario selecciona la talla antes de agregar. El pedido permite cantidades de 1 a 99 por producto/talla, cambio de talla y eliminación.
 El pedido se guarda localmente en el navegador con la clave corrySportCartV2. No usa los productos de plantilla guardados por la versión anterior.
-WhatsApp abre una consulta con productos, tallas, cantidades y total referencial. No envía mensajes automáticamente ni cobra pagos.
+WhatsApp abre una consulta con productos, tallas, cantidades y Total a pagar. No envía mensajes automáticamente ni cobra pagos.
 El formulario de contacto abre WhatsApp; no necesita un servidor ni guarda datos del formulario.
 Confirma el número comercial, los precios vigentes y las condiciones de entrega antes de publicar.
 
@@ -42,3 +42,4 @@ Se verificó en Microsoft Edge mediante Playwright: filtros, búsqueda sin tilde
 Se comprobó la composición de los enlaces de WhatsApp sin enviar mensajes.
 Se revisaron anchos de 320, 375, 390, 680, 768, 1024 y 1440 px, además del movimiento reducido y navegación por teclado.
 Las mediciones de Core Web Vitals reales dependen del hosting y del tráfico; no se atribuyen resultados de campo a estas pruebas locales.
+
